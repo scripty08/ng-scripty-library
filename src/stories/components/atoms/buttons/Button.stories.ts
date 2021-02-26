@@ -1,5 +1,6 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
+import { showCode } from '../../Helper';
 import Button from './button.component';
 
 export default {
@@ -21,15 +22,9 @@ Primary.args = {
   label: 'Button',
   backgroundColor: '#ccc'
 };
-Primary.parameters = {
-  docs: {
-    source: {
-      code: `
-       <Button class="primary" backgroundColor="#ccc"></Button>
-      `
-    },
-  },
-};
+showCode(`
+            <button class="primary" backgroundColor="#ccc"></Button>
+     `, Primary);
 
 export const Secondary = Template.bind({});
 Secondary.args = {

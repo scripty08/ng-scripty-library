@@ -1,0 +1,32 @@
+.scripty-input {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  display: inline-block;
+  line-height: 1;
+}
+.scripty-input--primary {
+  color: black;
+  background-color: #fff;
+}
+.scripty-input--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.scripty-input--small {
+  font-size: 12px;
+  padding: 10px 16px;
+  height: 20px;
+}
+.scripty-input--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+  height: 30px;
+}
+.scripty-input--large {
+  font-size: 16px;
+  padding: 12px 24px;
+  height: 40px;
+}
