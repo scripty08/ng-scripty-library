@@ -7,6 +7,7 @@ export default {
   title: 'Example/Input',
   component: InputComponent,
   argTypes: {
+    size: { control: 'select' },
   }
 } as Meta;
 
@@ -17,20 +18,19 @@ const Template: Story<InputComponent> = (args: InputComponent) => ({
 
 export const TextInput = Template.bind({});
 TextInput.args = {
-  primary: true,
   type: 'text',
-  value: 'Mein Text'
+  value: '',
+  label: 'Gutschein'
 };
 showCode(`
-            <InputComponent class="primary" type="text" value="Mein Text"></InputComponent>
+            <InputComponent type="text" value="Mein Text"></InputComponent>
      `, Text);
 
 export const NumberInput = Template.bind({});
 NumberInput.args = {
-  primary: true,
   type: 'number',
   value: '42'
 };
 showCode(`
-            <InputComponent class="primary" type="number" value="35"></InputComponent>
+            <InputComponent type="number" value="35"></InputComponent>
      `, NumberInput);

@@ -1,20 +1,35 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { trigger, state, style } from '@angular/animations';
 
 @Component({
   selector: 'scripty-input',
   templateUrl: './input.html',
   styleUrls: ['./input.scss'],
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        height: '200px',
+        backgroundColor: 'yellow'
+      })),
+    ]),
+  ],
 })
-export default class InputComponent {
+export default class InputComponent implements OnInit {
 
   @Input()
-  primary = false;
+  id: string;
+
+  @Input()
+  label: string;
+
+  @Input()
+  name: string;
 
   @Input()
   type: 'text';
 
   @Input()
-  size: 'small' | 'medium' | 'large' = 'medium';
+  size: 'xs' | 's' | 'm' | 'l' = 'm';
 
   @Input()
   value: string;
@@ -22,8 +37,29 @@ export default class InputComponent {
   @Output()
   onInput = new EventEmitter<Event>();
 
+  state = '';
+
+  isOpen = true;
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
+
+  async ngOnInit() {
+    this.state = this.label;
+  }
+
+  public onBlur() {
+    console.log('onBlur');
+    this.label = this.state
+  }
+
+  public onFocus() {
+    console.log('onFocus');
+    this.label = ''
+  }
+
   public get classes(): string[] {
-    const mode = this.primary ? 'scripty-input--primary' : 'scripty-input--secondary';
-    return ['scripty-input', `scripty-input--${this.size}`, mode];
+    return ['scripty-input', `scripty-input--${this.size}`];
   }
 }

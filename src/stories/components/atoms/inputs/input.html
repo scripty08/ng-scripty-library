@@ -1,6 +1,18 @@
-<input
-  [type]="type"
-  (input)="onInput.emit($event)"
-  [ngClass]="classes"
-  [value]="value"
-/>
+<div class="form-label-group">
+  <input
+    [id]="id"
+    [name]="name"
+    [type]="type"
+    (input)="onInput.emit($event)"
+    [ngClass]="classes"
+    [value]="value"
+    (blur)="onBlur()"
+    (focus)="onFocus()"
+  />
+  <label>{{label}}</label>
+</div>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+
+

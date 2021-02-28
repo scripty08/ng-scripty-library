@@ -1,32 +1,58 @@
+@import '../../../../styles.scss';
+
+.form-label-group {
+  position: relative;
+
+  label {
+    padding: .75rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: calc(100% - 18px);
+    margin-bottom: 0;
+    line-height: .85;
+    color: #495057;
+    pointer-events: none;
+    cursor: text;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+  }
+}
+
+
 .scripty-input {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border-radius: 0.5em;
-  border: 1px solid #ccc;
+  font-weight: 500;
+  color: $middleBlck;
+  outline: transparent;
+  border-radius: .1875rem;
+  border: 1px solid #bdbdbd;
   display: inline-block;
-  line-height: 1;
+  line-height: 1.6;
+  background-clip: padding-box;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  &:focus {
+    border: 1px solid #333333;
+  }
 }
-.scripty-input--primary {
-  color: black;
-  background-color: #fff;
+
+
+
+.scripty-input--xs {
+  font-size: .55rem;
+  padding: .375rem .75rem;
 }
-.scripty-input--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+.scripty-input--s {
+  font-size: .60rem;
+  padding: .375rem .75rem;
 }
-.scripty-input--small {
-  font-size: 12px;
-  padding: 10px 16px;
-  height: 20px;
+.scripty-input--m {
+  font-size: 1rem;
+  padding: .375rem .75rem;
 }
-.scripty-input--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-  height: 30px;
-}
-.scripty-input--large {
-  font-size: 16px;
-  padding: 12px 24px;
-  height: 40px;
+.scripty-input--l {
+  font-size: .80rem;
+  padding: .375rem .75rem;
 }
