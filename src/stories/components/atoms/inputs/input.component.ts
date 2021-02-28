@@ -1,20 +1,36 @@
-import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, state, style } from '@angular/animations';
 
 @Component({
-  selector: 'scripty-input',
+  selector: 'sc-text-input',
   templateUrl: './input.html',
-  styleUrls: ['./input.scss'],
+  styleUrls: ['../../components.scss'],
   animations: [
-    trigger('openClose', [
-      state('open', style({
-        height: '200px',
-        backgroundColor: 'yellow'
+    trigger('labelFocusBlur', [
+      state('focus', style({
+        position: 'absolute',
+        top: '-10px',
+        fontSize: '13px'
+      })),
+      state('blur', style({
+
+      })),
+    ]),
+    trigger('inputFocusBlur', [
+      state('focus', style({
+        paddingTop: '1.8rem',
+        paddingBottom: '.7rem',
+        paddingLeft: '1.1rem',
+        height: '0.5rem',
+        fontSize: '1rem'
+      })),
+      state('blur', style({
+
       })),
     ]),
   ],
 })
-export default class InputComponent implements OnInit {
+export default class InputComponent {
 
   @Input()
   id: string;
@@ -29,37 +45,28 @@ export default class InputComponent implements OnInit {
   type: 'text';
 
   @Input()
-  size: 'xs' | 's' | 'm' | 'l' = 'm';
+  size: 'small' | 'medium' | 'large' = 'medium';
 
   @Input()
   value: string;
 
-  @Output()
-  onInput = new EventEmitter<Event>();
+  focused = false;
 
-  state = '';
-
-  isOpen = true;
-
-  toggle() {
-    this.isOpen = !this.isOpen;
+  public handleInput(e): void {
+    this.value = e.target.value;
   }
 
-  async ngOnInit() {
-    this.state = this.label;
+  public handleBlur(e): void {
+    if (this.value === '') {
+      this.focused = false;
+    }
   }
 
-  public onBlur() {
-    console.log('onBlur');
-    this.label = this.state
-  }
-
-  public onFocus() {
-    console.log('onFocus');
-    this.label = ''
+  public handleFocus(e): void {
+    this.focused = true;
   }
 
   public get classes(): string[] {
-    return ['scripty-input', `scripty-input--${this.size}`];
+    return [`${this.size}`];
   }
 }

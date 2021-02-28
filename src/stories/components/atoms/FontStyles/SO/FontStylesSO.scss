@@ -1,0 +1,268 @@
+@import "_vars";
+
+/* global font styles 1 - 15 (with defaults) */
+
+.font-style-1,
+.font-style-1 h1,
+.font-style-1 h2,
+.font-style-1 h3,
+.font-style-1 h4,
+.font-style-1 h5,
+.font-style-1 h6,
+.font-style-1 p {
+  color: map_get($cbrColors, black);
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media screen and (min-width: map_get($grid-breakpoints, lg)) {
+    font-size: 64px;
+  }
+}
+
+.font-style-2,
+.font-style-2 h1,
+.font-style-2 h2,
+.font-style-2 h3,
+.font-style-2 h4,
+.font-style-2 h5,
+.font-style-2 h6,
+.font-style-2 p {
+  color: map_get($cbrColors, black);
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+fs-widget-slider-homepage h1, // Default
+.font-style-3,
+.font-style-3 h1,
+.font-style-3 h2,
+.font-style-3 h3,
+.font-style-3 h4,
+.font-style-3 h5,
+.font-style-3 h6,
+.font-style-3 p {
+  color: map_get($cbrColors, black);
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media screen and (min-width: map_get($grid-breakpoints, md)) {
+    font-size: 44px;
+  }
+
+  @media screen and (min-width: map_get($grid-breakpoints, xxl)) {
+    font-size: 70px;
+  }
+
+  @media screen and (min-width: map_get($grid-breakpoints, xxxl)) {
+    font-size: 100px;
+  }
+}
+
+fs-widget-text-image h1, // Default
+.font-style-4,
+.font-style-4 h1,
+.font-style-4 h2,
+.font-style-4 h3,
+.font-style-4 h4,
+.font-style-4 h5,
+.font-style-4 h6,
+.font-style-4 p {
+  color: map_get($cbrColors, black);
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media screen and (min-width: map_get($grid-breakpoints, xl)) {
+    font-size: 40px;
+  }
+}
+
+h1, // Default
+fs-widget-text-image h2, // Default
+.font-style-5,
+.font-style-5 h1,
+.font-style-5 h2,
+.font-style-5 h3,
+.font-style-5 h4,
+.font-style-5 h5,
+.font-style-5 h6,
+.font-style-5 p {
+  color: map_get($cbrColors, black);
+  font-size: 36px;
+  font-weight: 300;
+  text-transform: none;
+
+  @media screen and (min-width: map_get($grid-breakpoints, xl)) {
+    font-size: 40px;
+  }
+}
+
+h2, // Default
+fs-widget-text-image h3, // Default
+.font-style-6,
+.font-style-6 h1,
+.font-style-6 h2,
+.font-style-6 h3,
+.font-style-6 h4,
+.font-style-6 h5,
+.font-style-6 h6,
+.font-style-6 p {
+  color: map_get($cbrColors, black);
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: none;
+
+  @media screen and (min-width: map_get($grid-breakpoints, xl)) {
+    font-size: 36px;
+  }
+}
+
+.font-style-7,
+.font-style-7 h1,
+.font-style-7 h2,
+.font-style-7 h3,
+.font-style-7 h4,
+.font-style-7 h5,
+.font-style-7 h6,
+.font-style-7 p {
+  color: map_get($cbrColors, black);
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: none;
+
+  @media screen and (min-width: map_get($grid-breakpoints, md)) {
+    font-size: 30px;
+  }
+}
+
+h3, // Default
+fs-widget-text-image h4, // Default
+.seoFooter h1, // Default
+.font-style-8,
+.font-style-8 h1,
+.font-style-8 h2,
+.font-style-8 h3,
+.font-style-8 h4,
+.font-style-8 h5,
+.font-style-8 h6,
+.font-style-8 p {
+  color: map_get($cbrColors, black);
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: none;
+
+  @media screen and (min-width: map_get($grid-breakpoints, xl)) {
+    font-size: 26px;
+  }
+}
+
+h4, // Default
+h5, // Default
+h6, // Default
+.seoFooter h2, // Default
+.font-style-9,
+.font-style-9 h1,
+.font-style-9 h2,
+.font-style-9 h3,
+.font-style-9 h4,
+.font-style-9 h5,
+.font-style-9 h6,
+.font-style-9 p {
+  color: map_get($cbrColors, black);
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: none;
+
+  @media screen and (min-width: map_get($grid-breakpoints, xl)) {
+    font-size: 22px;
+  }
+}
+
+p, // Default
+.font-style-10,
+.font-style-10 h1,
+.font-style-10 h2,
+.font-style-10 h3,
+.font-style-10 h4,
+.font-style-10 h5,
+.font-style-10 h6,
+.font-style-10 p {
+  color: map_get($cbrColors, primary);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.seoFooter h3, // Default
+.font-style-11,
+.font-style-11 h1,
+.font-style-11 h2,
+.font-style-11 h3,
+.font-style-11 h4,
+.font-style-11 h5,
+.font-style-11 h6,
+.font-style-11 p {
+  color: map_get($cbrColors, black);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.font-style-12,
+.font-style-12 h1,
+.font-style-12 h2,
+.font-style-12 h3,
+.font-style-12 h4,
+.font-style-12 h5,
+.font-style-12 h6,
+.font-style-12 p {
+  color: map_get($cbrColors, primary);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.font-style-13,
+.font-style-13 h1,
+.font-style-13 h2,
+.font-style-13 h3,
+.font-style-13 h4,
+.font-style-13 h5,
+.font-style-13 h6,
+.font-style-13 p {
+  color: map_get($cbrColors, black);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.font-style-14,
+.font-style-14 h1,
+.font-style-14 h2,
+.font-style-14 h3,
+.font-style-14 h4,
+.font-style-14 h5,
+.font-style-14 h6,
+.font-style-14 p {
+  color: map_get($cbrColors, gray);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.font-style-15,
+.font-style-15 h1,
+.font-style-15 h2,
+.font-style-15 h3,
+.font-style-15 h4,
+.font-style-15 h5,
+.font-style-15 h6,
+.font-style-15 p {
+  color: map_get($cbrColors, primary);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: none;
+}

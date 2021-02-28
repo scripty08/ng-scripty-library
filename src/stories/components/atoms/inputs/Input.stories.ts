@@ -1,14 +1,21 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
+import { moduleMetadata } from '@storybook/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { showCode } from '../../Helper';
 import InputComponent from './input.component';
 
 export default {
-  title: 'Example/Input',
+  title: 'Scripty/Input',
+  decorators: [
+    moduleMetadata({
+      imports: [BrowserAnimationsModule],
+    }),
+  ],
   component: InputComponent,
   argTypes: {
     size: { control: 'select' },
-  }
+  },
 } as Meta;
 
 const Template: Story<InputComponent> = (args: InputComponent) => ({
@@ -20,7 +27,7 @@ export const TextInput = Template.bind({});
 TextInput.args = {
   type: 'text',
   value: '',
-  label: 'Gutschein'
+  label: 'Gutscheincode'
 };
 showCode(`
             <InputComponent type="text" value="Mein Text"></InputComponent>

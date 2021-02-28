@@ -1,10 +1,7 @@
 @import '../../../../styles.scss';
-
-.form-label-group {
-  position: relative;
-
+.form-group-label {
   label {
-    padding: .75rem;
+    padding: 1.125rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,40 +16,32 @@
     border-radius: .25rem;
     transition: all .1s ease-in-out;
   }
-}
 
-
-.scripty-input {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  color: $middleBlck;
-  outline: transparent;
-  border-radius: .1875rem;
-  border: 1px solid #bdbdbd;
-  display: inline-block;
-  line-height: 1.6;
-  background-clip: padding-box;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  &:focus {
-    border: 1px solid #333333;
+  input {
+    color: $middleBlck;
+    outline: transparent;
+    border-radius: .1875rem;
+    border: 1px solid #ced4da;
+    display: inline-block;
+    line-height: .85;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    &:focus {
+      border: 1px solid #333333;
+    }
   }
-}
 
-
-
-.scripty-input--xs {
-  font-size: .55rem;
-  padding: .375rem .75rem;
-}
-.scripty-input--s {
-  font-size: .60rem;
-  padding: .375rem .75rem;
-}
-.scripty-input--m {
-  font-size: 1rem;
-  padding: .375rem .75rem;
-}
-.scripty-input--l {
-  font-size: .80rem;
-  padding: .375rem .75rem;
+  .small {
+    font-size: .60rem;
+    padding: .375rem .75rem;
+  }
+  .medium {
+    font-size: 1rem;
+    padding: .375rem .75rem;
+    height: 2.25rem;
+  }
+  .large {
+    font-size: .80rem;
+    padding: .375rem .75rem;
+  }
 }
