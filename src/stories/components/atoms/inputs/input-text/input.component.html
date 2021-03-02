@@ -1,0 +1,15 @@
+<div class="form-group-label">
+  <input
+    [id]="id"
+    [name]="name"
+    [ngClass]="classes"
+    [value]="value"
+    (input)="handleInput($event)"
+    (blur)="handleBlur($event)"
+    (focus)="handleFocus($event)"
+    [@inputFocusBlur]="focused ? 'focus-'+ size : 'blur-'+size"
+    type="text"
+  />
+  <label [ngClass]="classes" [@labelFocusBlur]="focused ? 'focus-'+ size : 'blur-'+size">{{label}}</label>
+</div>
+

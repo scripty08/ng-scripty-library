@@ -4,7 +4,7 @@ import { showCode } from '../../Helper';
 import Button from './button.component';
 
 export default {
-  title: 'Example/Button',
+  title: 'Scripty/Buttons',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },

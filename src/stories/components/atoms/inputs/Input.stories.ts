@@ -3,10 +3,12 @@ import { moduleMetadata } from '@storybook/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { showCode } from '../../Helper';
-import InputComponent from './input.component';
+import InputPasswordComponent from './input-password/input-password.component';
+import InputNumberComponent from './input-number/input-number.component';
+import InputComponent from './input-text/input.component';
 
 export default {
-  title: 'Scripty/Input',
+  title: 'Scripty/Inputs',
   decorators: [
     moduleMetadata({
       imports: [BrowserAnimationsModule],
@@ -18,26 +20,45 @@ export default {
   },
 } as Meta;
 
-const Template: Story<InputComponent> = (args: InputComponent) => ({
+const TextTemplate: Story<InputComponent> = (args: InputComponent) => ({
   component: InputComponent,
   props: args,
 });
 
-export const TextInput = Template.bind({});
+const PasswordTemplate: Story<InputPasswordComponent> = (args: InputPasswordComponent) => ({
+  component: InputPasswordComponent,
+  props: args,
+});
+
+const NumberTemplate: Story<InputNumberComponent> = (args: InputNumberComponent) => ({
+  component: InputNumberComponent,
+  props: args,
+});
+
+export const TextInput = TextTemplate.bind({});
 TextInput.args = {
-  type: 'text',
   value: '',
   label: 'Gutscheincode'
 };
 showCode(`
-            <InputComponent type="text" value="Mein Text"></InputComponent>
-     `, Text);
+            <sc-input-text type="text" value="Gutscheincode"></sc-input-text>
+     `, TextInput);
 
-export const NumberInput = Template.bind({});
-NumberInput.args = {
-  type: 'number',
-  value: '42'
+export const PasswordInput = PasswordTemplate.bind({});
+PasswordInput.args = {
+  value: '',
+  label: 'Password',
+  required: true
 };
 showCode(`
-            <InputComponent type="number" value="35"></InputComponent>
+            <sc-input-password type="password" required></sc-input-password>
+     `, PasswordInput);
+
+export const NumberInput = NumberTemplate.bind({});
+NumberInput.args = {
+  value: '',
+  label: 'Age'
+};
+showCode(`
+            <sc-input-number type="number"></sc-input-number>
      `, NumberInput);
