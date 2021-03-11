@@ -1,0 +1,14 @@
+<div style="padding-top: 30px;">
+  <div #sliderRef class="range-slider">
+    <input
+      type="range"
+      [min]="min"
+      [max]="max"
+      [value]="value"
+      (input)="handleInput($event)"
+      (change)="handleInput($event)"
+    >
+    <output></output>
+    <div class='range-slider__progress'></div>
+  </div>
+</div>

@@ -11,5 +11,6 @@
     type="number"
   />
   <label [ngClass]="classes" [@labelFocusBlur]="focused ? 'focus-'+ size : 'blur-'+size">{{label}}</label>
+  <span *ngIf="showError" class="info">{{errorText}}</span>
 </div>
 

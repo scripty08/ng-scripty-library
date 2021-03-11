@@ -18,6 +18,12 @@ export class InputBase {
   size: 'small' | 'medium' | 'large' = 'medium';
 
   @Input()
+  showError: boolean;
+
+  @Input()
+  errorText: string;
+
+  @Input()
   value: string;
 
   @Input()

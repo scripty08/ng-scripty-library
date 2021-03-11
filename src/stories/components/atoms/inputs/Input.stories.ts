@@ -17,6 +17,7 @@ export default {
   component: InputComponent,
   argTypes: {
     size: { control: 'select' },
+    showError: {control: 'boolean'}
   },
 } as Meta;
 
@@ -38,7 +39,8 @@ const NumberTemplate: Story<InputNumberComponent> = (args: InputNumberComponent)
 export const TextInput = TextTemplate.bind({});
 TextInput.args = {
   value: '',
-  label: 'Gutscheincode'
+  label: 'Gutscheincode',
+  errorText: 'Dieses Feld darf nicht leer sein'
 };
 showCode(`
             <sc-input-text type="text" value="Gutscheincode"></sc-input-text>
@@ -48,7 +50,8 @@ export const PasswordInput = PasswordTemplate.bind({});
 PasswordInput.args = {
   value: '',
   label: 'Password',
-  required: true
+  required: true,
+  errorText: 'Dieses Feld darf nicht leer sein'
 };
 showCode(`
             <sc-input-password type="password" required></sc-input-password>
@@ -57,7 +60,8 @@ showCode(`
 export const NumberInput = NumberTemplate.bind({});
 NumberInput.args = {
   value: '',
-  label: 'Age'
+  label: 'Age',
+  errorText: 'Dieses Feld darf nicht leer sein'
 };
 showCode(`
             <sc-input-number type="number"></sc-input-number>

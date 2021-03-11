@@ -5,7 +5,7 @@ import {InputBase} from "../input-base/input-base";
 @Component({
   selector: 'sc-text-input',
   templateUrl: './input.component.html',
-  styleUrls: ['../../../components.scss'],
+  styleUrls: ['./input.component.scss'],
   animations: [
     labelFocusBlurAnimation(),
     inputFocusBlurAnimation(),

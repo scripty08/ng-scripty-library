@@ -5,7 +5,7 @@ import {InputBase} from "../input-base/input-base";
 @Component({
   selector: 'sc-input-password',
   templateUrl: './input-password.component.html',
-  styleUrls: ['../../../components.scss'],
+  styleUrls: ['./input-password.component.scss'],
   animations: [
     labelFocusBlurAnimation(),
     inputFocusBlurAnimation(),
